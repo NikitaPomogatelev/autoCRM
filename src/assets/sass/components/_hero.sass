@@ -1,0 +1,40 @@
+.hero
+    padding-top: 50px
+    padding-bottom: 130px
+    background: linear-gradient(99.31deg, #2C2D32 0%, #000A13 100%)
+    
+    &__container
+        display: flex
+        align-items: center
+        justify-content: center
+        @media (max-width: 1200px)
+            flex-direction: column
+    &__text
+        color: $white
+        max-width: 500px
+        @media (max-width: 1200px)
+            max-width: 442px
+            margin-bottom: 75px
+            text-align: center
+        @media (max-width: 768px)
+            font-size: 24px
+            
+    &__heading
+        margin-bottom: 48px
+        font-size: 48px
+        line-height: 1.1
+        @media (max-width: 1200px)
+            font-size: 36px
+    &__logo
+        display: inline-block
+        max-width: 238px
+        max-height: 46px
+        svg
+            object-fit: cover
+            max-width: 238px
+            max-height: 46px
+    &__descr
+        font-size: 24px
+        margin-bottom: 50px
+        @media (max-width: 1200px)
+            font-size: 20px
