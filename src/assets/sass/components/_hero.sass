@@ -2,6 +2,8 @@
     padding-top: 50px
     padding-bottom: 130px
     background: linear-gradient(99.31deg, #2C2D32 0%, #000A13 100%)
+    @media (max-width: 768px)
+        padding-bottom: 55px
     
     &__container
         display: flex
@@ -16,8 +18,7 @@
             max-width: 442px
             margin-bottom: 75px
             text-align: center
-        @media (max-width: 768px)
-            font-size: 24px
+        
             
     &__heading
         margin-bottom: 48px
@@ -25,14 +26,27 @@
         line-height: 1.1
         @media (max-width: 1200px)
             font-size: 36px
+        @media (max-width: 768px)
+            max-width: 260px
+            margin: 0 auto
+            margin-bottom: 26px
+            font-size: 24px
+            line-height: 1.6
     &__logo
         display: inline-block
         max-width: 238px
         max-height: 46px
+        @media (max-width: 768px)
+            max-width: 131px
+            max-height: 23px
+
         svg
             object-fit: cover
             max-width: 238px
             max-height: 46px
+            @media (max-width: 768px)
+                max-width: 131px
+                max-height: 23px
     &__descr
         font-size: 24px
         margin-bottom: 50px

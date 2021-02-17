@@ -8,17 +8,17 @@ body
     
     // color: $color-dark
     +circe-regular
-    font-size: 18px
+    font-size: 16px
     line-height: 1.4
-    // overflow-x: hidden
     min-width: 320px
     min-height: 100vh
     font-feature-settings: 'pnum' on, 'lnum' on
     // background-color: $color-white
-.page
+.page-content
     position: relative
     min-height: 100%
-    padding-bottom: 200px
+    overflow-x: hidden
+
 
     
 .container 
@@ -68,11 +68,13 @@ button
     cursor: pointer
 
 .title
-    font-size: 64px
-    @media (max-width: 1200px)
-        font-size: 42px
+    font-size: 36px
+    +circe-bold
+    color: $outer-space
+    // @media (max-width: 1200px)
+    //     font-size: 42px
     @media (max-width: 768px)
-        font-size: 24px
+        font-size: 20px
         
 
 

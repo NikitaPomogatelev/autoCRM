@@ -1,0 +1,100 @@
+.features
+    padding: 100px 0
+    background-color: $ship-gray
+    color: $white
+    @media (max-width: 768px)
+        padding: 50px 0
+    &__title
+        margin-bottom: 70px
+        color: inherit
+        text-align: center
+        @media (max-width: 768px)
+            margin-bottom: 45px
+
+    &__list
+        display: flex
+        align-items: start
+        justify-content: space-between
+        margin-bottom: 5px
+        @media (max-width: 1350px)
+            flex-wrap: wrap
+    
+            
+    &__item
+        position: relative
+        width: 25%
+        margin-bottom: 45px
+        @media (max-width: 1350px)
+            width: 50%
+            justify-self: center
+            
+        @media (max-width: 768px)
+            width: 100%
+            
+            
+    &__item:not(:last-of-type)::after
+        content: ''
+        position: absolute
+        right: 7%
+        bottom: 0
+        display: inline-block
+        width: 1px
+        height: 97%
+        background-color: rgba(255, 255, 255, 0.19)
+        @media (max-width: 1350px)
+            right: 0
+            top: 0
+            bottom: auto
+        @media (max-width: 768px)
+            display: none
+
+    &__item:nth-of-type(2n)
+        @media (max-width: 1350px)
+            &::after
+                display: none
+        @media (max-width: 768px)
+            display: none
+            
+    &__item:nth-last-of-type(-n + 2)
+        @media (max-width: 768px)
+            display: none
+
+    &__item-box
+        max-width: 300px
+        +sf-regular
+        @media (max-width: 1350px)
+            margin: 0 auto
+        @media (max-width: 768px)
+            text-align: center
+ 
+    &__item-title
+        margin-bottom: 20px
+        font-weight: 400
+        font-size: 24px
+        line-height: 1.4
+        @media (max-width: 768px)
+            font-size: 18px
+            margin-bottom: 15px
+        
+    &__item-descr
+        color: $silver
+        line-height: 1.6
+
+    &__item-descr:not(:last-of-type)
+        margin-bottom: 60px
+        @media (max-width: 768px)
+            margin-bottom: 30px
+        
+
+    &__btn
+        display: block
+        padding: 20px
+        width: 202px
+        margin: 0 auto
+        text-align: center
+        font-size: 24px
+        +sf-regular
+        @media (max-width: 768px)
+            font-size: 18px
+            padding: 15px
+
