@@ -1,0 +1,56 @@
+.problems
+    padding: 100px 0
+    @media (max-width: 768px)
+        padding: 50px 0
+    &__title
+        margin-bottom: 70px
+        @media (max-width: 768px)
+            margin-bottom: 40px
+    &-list
+        display: flex
+        flex-wrap: wrap
+        @media (max-width: 1200px)
+            flex-direction: column
+            
+        // @media (max-width: 768px)
+        //     height: 462px
+    &-list__item
+        width: 50%
+        display: flex
+        margin-bottom: 60px
+        padding-right: 40px
+        @media (max-width: 1200px)
+            width: 100%
+            padding-right: 0
+        &:nth-last-of-type(-n + 2)
+            margin-bottom: 0
+            @media (max-width: 1200px)
+                height: 0
+                overflow: hidden
+            
+    &-list__item-img
+        flex-shrink: 0
+        width: 100px
+        height: 100px
+        margin-right: 30px
+        @media (max-width: 1200px)
+            width: 90px
+            height: 90px
+        @media (max-width: 768px)
+            width: 60px
+            height: 60px
+            margin-right: 5px
+    &-list__item-title
+        margin-bottom: 19px
+        font-size: 24px
+        +circe-bold
+        color: $outer-space
+        @media (max-width: 768px)
+            font-size: 18px
+    &-list__item-descr
+        font-size: 16px
+        max-width: 500px
+        line-height: 1.6
+        @media (max-width: 768px)
+            font-size: 14px
+            height: 132px

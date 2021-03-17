@@ -9,28 +9,28 @@
         font-size: 14px
         @media (max-width: 952px)
             font-size: 12px
-    @media (min-width: 1200px)
-        &__link::before
-            content: '';
-            position: absolute
-            left: auto
-            right: 0
-            bottom: 0
-            width: 0
-            height: 1px
-            background-color: $emerald
-            transition: width .4s
-            
-    &__link:hover
-        &::before
-            width: 100%
-            right: auto
-            left: 0
+    &__link::before
+        content: '';
+        position: absolute
+        left: auto
+        right: 0
+        bottom: 0
+        width: 0
+        height: 1px
+        background-color: $emerald
+        transition: width .4s
     &__link.nav-list__link--current
         &::before
             width: 100%
             right: auto
             left: 0
+            
+    @media (min-width: 1200px)
+        &__link:hover
+            &::before
+                width: 100%
+                right: auto
+                left: 0
     
         
 
@@ -117,4 +117,20 @@
     transform: translate(-50%, -50%) rotate(-45deg)
 .burger::after
     transform: translate(-50%, -50%) rotate(45deg)
+
+.btn-more
+    display: none
+    width: 200px
+    padding: 20px
+    margin: 0 auto
+    font-size: 24px
+    +sf-regular
+    color: #2B333C
+    border: 1px solid #2B333C
+    @media (max-width: 1200px)
+        display: block
+    @media (max-width: 768px)
+        font-size: 18px
+        padding: 20px 15px
+        width: 156px
 

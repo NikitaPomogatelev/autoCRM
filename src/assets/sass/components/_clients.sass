@@ -1,0 +1,44 @@
+.clients
+    padding: 100px 0
+    @media (max-width: 768px)
+        padding: 50px 0
+    &__title
+        text-align: center
+        margin-bottom: 90px
+        @media (max-width: 768px)
+            margin-bottom: 45px
+    &__content
+        display: flex
+        align-items: stretch
+        flex-wrap: wrap
+
+        overflow: hidden
+        @media (max-width: 1200px)
+            max-height: 640px
+        @media (max-width: 768px)
+            max-height: 550px
+            margin-bottom: 30px
+    &__item
+        text-align: center
+        width: 25%
+        margin-bottom: 75px
+        @media (max-width: 1200px)
+            margin-bottom: 40px
+            width: 50%
+            &:nth-last-of-type(-n + 6)               
+                opacity: 0
+            
+    &__item-img
+        width: 70px
+        height: 70px
+        margin: 0 auto
+        margin-bottom: 25px
+        @media (max-width: 768px)
+            width: 50px
+            height: 50px
+    &__item-title
+        +circe-bold
+        color: #4a4a4a
+        @media (max-width: 768px)
+            font-size: 12px
+    
