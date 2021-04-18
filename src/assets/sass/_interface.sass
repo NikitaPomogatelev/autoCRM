@@ -94,6 +94,7 @@
     justify-content: space-between
     width: 34px
     height: 24px
+    
     @media (max-width: 768px)
         display: flex
     &__line
@@ -101,22 +102,27 @@
         height: 2px
         background-color: $white
         border-radius: 5px
-.burger::before, .burger::after
-    content: ''
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    width: 34px
-    height: 2px
-    background-color: $white
-    border-radius: 5px
-    opacity: 0
-    pointer-events: none
-.burger::before
-    transform: translate(-50%, -50%) rotate(-45deg)
-.burger::after
-    transform: translate(-50%, -50%) rotate(45deg)
+        transition: transform .2s ease-in-out
+    
+.burger.active
+    .burger__line:nth-child(2n)
+        opacity: 0
+    .burger__line
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        opacity: 0
+        
+    .burger__line:first-child
+        opacity: 1
+        transform: translate(-50%, -50%) rotate(45deg)
+    .burger__line:last-child
+        opacity: 1
+        transform: translate(-50%, -50%) rotate(-45deg)
+
+        
+
 
 .btn-more
     display: none
@@ -133,4 +139,64 @@
         font-size: 18px
         padding: 20px 15px
         width: 156px
+.page-content
+    position: relative
+    min-height: 100%
+    overflow: hidden
+.main
+    margin-top: 87px
+.overlay
+    opacity: 0
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba($dark, 0.9);
+    overflow: hidden
+    pointer-events: none
+    transition: opacity .3s ease
+    z-index: -1
+.overlay.active
+    opacity: 1
+    z-index: 8
+    pointer-events: auto
+    
+.overlay-content
+    
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 100vw
+    height: 100vh
 
+.menu
+    &__list
+        margin-bottom: 35px
+    &__item:not(:last-of-type)
+        margin-bottom: 15px
+    &__item
+
+        font-size: 14px
+        text-align: center
+        color: $white
+    &__link
+        position: relative
+        text-transform: uppercase
+    &__link::before
+        content: '';
+        position: absolute
+        left: auto
+        right: 0
+        bottom: 0
+        width: 0
+        height: 1px
+        background-color: $emerald
+        transition: width .4s
+    &__link.menu__link--current
+        &::before
+            width: 100%
+            right: auto
+            left: 0
+    

@@ -1,615 +1,837 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OINZ | Внедрение AmoCRM </title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-
-    
-</head>
-<body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OINZ | Внедрение AmoCRM</title>
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
+  </head>
+  <body>
     <div class="page-content">
-        <header class="header">
-            <div class="container header__container">
-                <a href="#" class="logo header__logo" aria-label="OINZ">
-                    <picture>
-                        <img src="./assets/img/logo.png" alt="logo" srcset="">
-                    </picture>
-                </a>
-                <nav class="nav header__nav">
-                    <ul class="nav-list">
-                        <li class="nav-list__item">
-                            <a href="#" class="nav-list__link nav-list__link--current">Внедрение</a>
-                        </li>
-                        <li class="nav-list__item">
-                            <a href="#" class="nav-list__link">Виджеты</a>
-                        </li>
-                        <li class="nav-list__item">
-                            <a href="#" class="nav-list__link">Лицензии</a>
-                        </li>
-                        <li class="nav-list__item">
-                            <a href="#" class="nav-list__link">Обучение</a>
-                        </li>
-                    </ul>
-                </nav>
+      <header class="header">
+        <div class="container header__container">
+          <a href="#" class="logo header__logo" aria-label="OINZ">
+            <picture>
+              <img src="./assets/img/logo.png" alt="logo" srcset="" />
+            </picture>
+          </a>
+          <nav class="nav header__nav">
+            <ul class="nav-list">
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link nav-list__link--current"
+                  >Внедрение</a
+                >
+              </li>
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link">Виджеты</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link">Лицензии</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="#" class="nav-list__link">Обучение</a>
+              </li>
+            </ul>
+          </nav>
 
-                <div class="callback header__callback">
-                    <button class="btn-secondary header__btn-secondary">Заказать звонок</button>
-                    <a href="tel:79993331039" class="header__phone">+7 999 333 10 39</a>
-                    <a href="#" class="callback__whatsapp" aria-label="Перейти в WhatsApp">
-                        <svg>
-                            <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
-                        </svg>
-                    </a>
-                </div>
-                <button type="menu" class="burger">
-                    <span class="burger__line"></span>
-                    <span class="burger__line"></span>
-                    <span class="burger__line"></span>
-                </button>
+          <div class="callback header__callback">
+            <button class="btn-secondary header__btn-secondary">
+              Заказать звонок
+            </button>
+            <a href="tel:79993331039" class="header__phone">+7 999 333 10 39</a>
+            <a
+              href="#"
+              class="callback__whatsapp"
+              aria-label="Перейти в WhatsApp"
+            >
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
+              </svg>
+            </a>
+          </div>
+          <button type="menu" class="burger burger-btn active">
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+            <span class="burger__line"></span>
+          </button>
+        </div>
+      </header>
+      <main class="main">
+        <section class="hero">
+          <div class="container hero__container">
+            <div class="hero__text">
+              <h1 class="hero__heading">
+                Внедрение
+                <span class="hero__logo">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#autocrm"></use>
+                  </svg>
+                </span>
+                в ваш бизнес
+              </h1>
+              <p class="hero__descr">
+                Получите 16 готовых виджетов, расширяющих возможности системы
+                при заказе внедрения
+              </p>
+              <a class="btn-primary">Рассчитать стоимость</a>
             </div>
-
-        </header>
-        <main class="main">
-            <section class="hero">
-                <div class="container hero__container">
-                    <div class="hero__text">
-                        <h1 class="hero__heading">Внедрение 
-                            <span class="hero__logo">
-                                <svg >
-                                    <use xlink:href="assets/img/sprite.svg#autocrm"></use>
-                                </svg>
-                            </span>
-                            в ваш бизнес</h1>
-                        <p class="hero__descr">Получите 16 готовых виджетов, расширяющих
-                            возможности системы при заказе внедрения</p>
-                        <a class="btn-primary">Рассчитать стоимость</a>
-                    </div>
-                    <div class="hero__image">
-                        <picture>
-                            <source media="(min-width: 768px)" srcset="./assets/img/hero-img.png">
-                            <source media="(max-width: 768px)" srcset="./assets/img/hero-img-sm.png">
-                            <img src="./assets/img/hero-img.png" alt="Схема внедрения">
-                        </picture>
-                    </div>
-                </div>
-            </section>
-            <section class="statistics">
-                <div class="container statistics__container">
-                    <div class="statistics__text">
-                        <h2 class="title statistics__title">Статистика продаж в мессенджерах</h2>
-                        <p class="statistics__descr">Посмотрите детальную статистику обращений из мессенджеров и оцените
-                            эффективность каждого из них как источника трафика. Новый виджет для рабочего
-                            стола предоставит вам возможность проанализировать качество работы
-                            сотрудников: например, по количеству ответов на чаты.</p>
-                        <button class="btn-secondary statistics__btn">Попробуйте бесплатно</button>
-
-                    </div>
-                    <div class="statistics__img">
-                        <picture>
-                            <img src="./assets/img/stat.png" alt="Статистика">
-                        </picture>
-                    </div>
-                </div>
-            </section>
-
-            <section class="features">
-                <div class="container">
-                    <h2 class="title features__title">Какие ценности мы даем вашему бизнесу:</h2>
-                    <ul class="features__list">
-                        <li class="features__item">
-                            <div class="features__item-box">
-                                <h3 class="features__item-title">Автоматизация</h3>
-                                <p class="features__item-descr">Автоматизация повторяющихся операций (автозадачи, автоматическая отправка шаблонных писем, sms,авто-генерация договоров, счетов, актов и т.д.)</p>
-
-                                <h3 class="features__item-title">Одно окно в сделке</h3>
-                                <p class="features__item-descr">Возможность вести общение с клиентом из одного окна в сделке</p>
-
-                                <h3 class="features__item-title">Хронологический список</h3>
-                                <p class="features__item-descr">Хронологический список действий каждого сотрудника отдела продаж в едином списке событий</p>
-                            </div>
-                        </li>
-                        <li class="features__item">
-                            <div class="features__item-box">
-                                <h3 class="features__item-title">Интеграция каналов связи</h3>
-                                <p class="features__item-descr">Интеграция всех каналов связи с клиентом. Е-mail, телефония sms, сайт, WhatsApp, Viber, instagram,FaceBook,  чат между сотрудниками.
-                                </p>
-
-                                <h3 class="features__item-title">Актуальное</h3>
-                                <p class="features__item-descr">Все актуальные сведения о заказе и о клиенте в одном месте
-                                </p>
-
-                                <h3 class="features__item-title">Фиксация звонков</h3>
-                                <p class="features__item-descr">Фиксация звонков в системе в т.ч. и с мобильного (доступно при использовании телефонии Sipuni).</p>
-
-                            </div>
-                        </li>
-                        <li class="features__item">
-                            <div class="features__item-box">
-                                <h3 class="features__item-title">Скрытие номеров</h3>
-                                <p class="features__item-descr">Возможность скрыть от менеджеров телефонные номера клиентов по которым они звонят (функция доступна в тарифе Профессиональный телефонии Sipuni)
-                                </p>
-
-                                <h3 class="features__item-title">Смена этапов продаж</h3>
-                                <p class="features__item-descr">Автоматическая смена этапа продаж по событию
-                                </p>
-
-                                <h3 class="features__item-title">Умное распределение</h3>
-                                <p class="features__item-descr">Умное распределение входящих обращений от клиентов на менеджеров компании
-                                </p>
-
-                            </div>
-                        </li>
-                        <li class="features__item">
-                            <div class="features__item-box">
-                                <h3 class="features__item-title">Организация рассылок</h3>
-                                <p class="features__item-descr">Организация рассылок для привлечения новых клиентов, подключаем и настраиваем виджеты mailchimp, sendpulse, mailygen и т.д.  
-                                </p>
-
-                                <h3 class="features__item-title">Встроенный мессенджер</h3>
-                                <p class="features__item-descr">Встроенный мессенджер для общения с коллегами
-                                </p>
-
-                                <h3 class="features__item-title">Отслеживание</h3>
-                                <p class="features__item-descr">Возможность отслеживать прочтение отправленного e-mail, посещения сайта или определенной страницы.
-                                </p>
-
-                            </div>
-                        </li>
-                    </ul>
-
-                    <a href="#" class="btn-secondary features__btn">Что еще?</a>
-
-                </div>
-            </section>
-
-            <section class="release">
-                <div class="container">
-                    <h2 class="title release__title">Новый релиз amoCRM, новые функции:</h2>
-                    <div class="release-video">
-                        <iframe class="release__content" src="https://www.youtube.com/embed/NqcrCtZoidw"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </section>
-
-            <section class="problems">
-                <div class="container">
-                    <h2 class="title problems__title">Проблемы, которые решает внедрение amoCRM:</h2>
-                    <ul class="problems-list">
-                        <li class="problems-list__item">
-                            <div class="problems-list__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#problem-1"></use>
-                                </svg>
-                            </div>
-                            <div class="problems-list__item-text">
-                                <h3 class="problems-list__item-title">Не системная обработка клиентов</h3>
-                                <p class="problems-list__item-descr">Нет системы продаж, хаотичные звонки или письма, непонятно когда и с каким клиентом связываться, как следствие не стабильные продажи.
-                                </p>
-                            </div>
-                        </li>
-                        <li class="problems-list__item">
-                            <div class="problems-list__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#problem-2"></use>
-                                </svg>
-                            </div>
-                            <div class="problems-list__item-text">
-                                <h3 class="problems-list__item-title">Пропустили звонок клиента</h3>
-                                <p class="problems-list__item-descr">После внедрения системы в ваш бизнес все обращения клиента по каждому из каналов связи автоматически фиксируются в системе и ставится задача на ответственного сотрудника.</p>
-
-                            </div>
-                        </li>
-                        <li class="problems-list__item">
-                            <div class="problems-list__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#problem-3"></use>
-                                </svg>
-                            </div>
-                            <div class="problems-list__item-text">
-                                <h3 class="problems-list__item-title">Менеджеры увольняются и уходят вместе с вашей клиентской базой</h3>
-                                <p class="problems-list__item-descr">Это можно исключить с помощью интеграции amoCRM и телефонии Sipuni (доступно на профессиональном тарифе). Менеджеры теперь вообще не видят телефонов клиентов.
-                                </p>
-
-                            </div>
-                        </li>
-                        <li class="problems-list__item">
-                            <div class="problems-list__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#problem-4"></use>
-                                </svg>
-                            </div>
-                            <div class="problems-list__item-text">
-                                <h3 class="problems-list__item-title">Бездействие сотрудников в рабочее время</h3>
-                                <p class="problems-list__item-descr">Сотрудники занимаются своими делами на рабочем месте,эту проблему решит amoCRM.</p>
-
-                            </div>
-                        </li>
-                        <li class="problems-list__item">
-                            <div class="problems-list__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#problem-5"></use>
-                                </svg>
-                            </div>
-                            <div class="problems-list__item-text">
-                                <h3 class="problems-list__item-title">Отсутствие сбора обратной связи от клиентов</h3>
-                                <p class="problems-list__item-descr">Встроенный индекс потребительской  лояльности (NPS). Доступен на тарифах Расширенный и Профессиональный в amoCRM.
-                                </p>
-
-                            </div>
-                        </li>
-                        <li class="problems-list__item">
-                            <div class="problems-list__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#problem-1"></use>
-                                </svg>
-                            </div>
-                            <div class="problems-list__item-text">
-                                <h3 class="problems-list__item-title">Не понятно на каком этапе продажи клиенты отказывают</h3>
-                                <p class="problems-list__item-descr">После внедрения видно на каком из этапов больше всего уходят клиенты,можно и нужно подумать над бизнес-процессом или понять причину отказа.
-                                </p>
-
-                            </div>
-                        </li>
-                    </ul>
-                    <button class="btn-secondary btn-more">Что еще?</button>
-                </div>
-            </section>
-             
-            <section class="stages">
-                <h2 class="title stages__title">Этапы внедрения amoCRM:</h2>
-                <div class="container stages__container">
-                    <div class="stages__col stages__col-left">
-                        <article class="stages__card stages__card--green">
-                            <h3 class="stages__card-title">Погружаемся в бизнес</h3>
-                            <p class="stages__card-descr">Проводим аудит отдела продаж и
-                                описываем бизнес-процессы </p>
-                        </article>
-                        <h3 class="stages__descr">Настройка <br> системы</h3>
-                        <article class="stages__card">
-                            <h3 class="stages__card-title">Обучаем менеджеров работать в едином стандарте</h3>
-                            <p class="stages__card-descr">Менеджеры работают быстрее и
-                                эффективнее с помощью автоматической
-                                отправки коммерческих предложений,
-                                SMS-уведомлений, автозаполнения договоров.</p>
-                        </article>
-                        <h3 class="stages__descr">Сопровождение</h3>
-                    </div>
-                    <div class="stages__col stages__col-circles">
-                        <div class="stages__circle">
-                            <svg>
-                                <use xlink:href="assets/img/sprite.svg#order"></use>
-                            </svg>
-                        </div>
-                        <div class="stages__circle">
-                            <svg>
-                                <use xlink:href="assets/img/sprite.svg#settings"></use>
-                            </svg>
-                        </div>
-                        <div class="stages__circle">
-                            <svg>
-                                <use xlink:href="assets/img/sprite.svg#teaching"></use>
-                            </svg>
-                        </div>
-                        <div class="stages__circle">
-                            <svg>
-                                <use xlink:href="assets/img/sprite.svg#presentation"></use>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="stages__col stages__col-right">
-                        <h3 class="stages__descr">Подготовка <br> регламента </h3>
-                        <article class="stages__card">
-                            <h3 class="stages__card-title">Внедряем комплексную CRM-систему</h3>
-                            <p class="stages__card-descr">Собираем все коммуникации в одном
-                                месте: многоканальная IP-телефония, почта,
-                                 мессенджеры, социальные сети. Заявки
-                                больше не потеряются. </p>
-                        </article>
-                        <h3 class="stages__descr">ОБУЧЕНИЕ</h3>
-                        <article class="stages__card">
-                            <h3 class="stages__card-title">Настраиваем инструменты аналитики и управления</h3>
-                            <p class="stages__card-descr">Вы не можете управлять тем, что не можете
-                                измерить. Контролируйте выполнение плана
-                                продаж по ежедневным показателям. </p>
-                        </article>
-                    </div>
-                </div>
-            </section>
-            
-
-            <section class="clients">
-                <div class="container">
-                    <h2 class="title clients__title">Наши основные клиенты:</h2>
-                    <div class="clients__content">
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#bank"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Финансовые компании</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#gavel"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Юридические компании</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#juice"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Производственные компании</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#gavel"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Маркетиновые и PR компании</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#worker"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Строительные компании</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#eat"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Рестораны и кейтеринг компании</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#delivery-man"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Служба доставки здоровой еды</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#car"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Авто-сервисы</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#programmer"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">ИТ-Компании</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#pedicure"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Школы танцев</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#microphone"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Вокальные школы</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#audiobook"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Колл-центры</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#printer"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Типографии и другие</span>
-                        </div>
-                        <div class="clients__item">
-                            <div class="clients__item-img">
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#restaurant"></use>
-                                </svg>
-                            </div>
-                            <span class="clients__item-title">Санаторно-курортная отрасль</span>
-                        </div>
-                        
-                    </div>
-                    <button class="btn-secondary btn-more">Кто ещё?</button>
-                </div>
-            </section>
-
-            <section class="certificate">
-                <div class="container">
-                    <h2 class="title certificate__title">Компания является сертифицированным партнером и интегратором amoCRM.</h2>
-                    <div class="certificate-row">
-                        <div class="certificate__item">
-                            <picture>
-                                <img src="./assets/img/certificate-1.jpg" srcset="./assets/img/certificate-1@2x.jpg 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </div>
-                        <div class="certificate__item">
-                            <picture>
-                                <img src="./assets/img/certificate-2.jpg" srcset="./assets/img/certificate-2@2x.jpg 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </div>
-                        <div class="certificate__item">
-                            <picture>
-                                <img src="./assets/img/certificate-3.jpg" srcset="./assets/img/certificate-3@2x.jpg 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </div>
-                        <div class="certificate__item">
-                            <picture>
-                                <img src="./assets/img/certificate-4.jpg" srcset="./assets/img/certificate-4@2x.jpg 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </div>
-                        <div class="certificate__item">
-                            <picture>
-                                <img src="./assets/img/certificate-5.jpg" srcset="./assets/img/certificate-5@2x.jpg 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="partners">
-                <div class="container">
-                    <h2 class="title partners__title">Наши партнеры и их продуктовые решения:</h2>
-                    <ul class="partners__list">
-                        <li class="partners__item">
-                            <picture>
-                                <img src="./assets/img/partner-1.png" srcset="./assets/img/partner-1@2x.png 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </li>
-                        <li class="partners__item">
-                            <picture>
-                                <img src="./assets/img/partner-2.png" srcset="./assets/img/partner-2@2x.png 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </li>
-                        <li class="partners__item">
-                            <picture>
-                                <img src="./assets/img/partner-3.png" srcset="./assets/img/partner-3@2x.png 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </li>
-                        <li class="partners__item">
-                            <picture>
-                                <img src="./assets/img/partner-4.png" srcset="./assets/img/partner-4@2x.png 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </li>
-                        <li class="partners__item">
-                            <picture>
-                                <img src="./assets/img/partner-5.png" srcset="./assets/img/partner-5@2x.png 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </li>
-                        <li class="partners__item">
-                            <picture>
-                                <img src="./assets/img/partner-6.png" srcset="./assets/img/partner-6@2x.png 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </li>
-                        <li class="partners__item">
-                            <picture>
-                                <img src="./assets/img/partner-7.png" srcset="./assets/img/partner-7@2x.png 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </li>
-                        <li class="partners__item">
-                            <picture>
-                                <img src="./assets/img/partner-8.png" srcset="./assets/img/partner-8@2x.png 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </li>
-                        <li class="partners__item">
-                            <picture>
-                                <img src="./assets/img/partner-9.png" srcset="./assets/img/partner-9@2x.png 2x" alt="Сертификат партнёра">
-                            </picture>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-
-            <section class="query">
-                <div class="container query__container">
-                    <form action="#" class="query-form">
-                        <h2 class="query-form__title">Если у Вас есть вопросы по
-                            внедрению amoCRM в вашу
-                            компанию - заполните форму
-                            и мы перезвоним!</h2>
-
-                            <label for="name">
-                                <div class="query-form__input-wrapper">
-                                    <input type="text" class="query-form__input" placeholder="Ваше имя" required>
-                                </div>
-                            </label>
-                            <label for="phone">
-                                <div class="query-form__input-wrapper">
-                                    <input type="number" class="query-form__input" placeholder="Ваш телефон" required>
-                                </div>
-                            </label>
-                            <button class="btn-primary query-form__btn">Хочу обсудить</button>
-
-                            <p class="query-form__descr">** Оставляя заявку, Вы даете согласие на обработку персональных данных согласно закону РФ.</p>
-                    </form>
-                    <div class="query__img">
-                        <img src="./assets/img/man.png" srcset="./assets/img/man@2x.png 2x" alt="Парень с ноутбуком">
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <footer class="footer">
-            <div class="container footer__container">
-            
-                <a href="#" class="logo footer__logo" aria-label="OINZ">
-                    <picture>
-                        <img src="./assets/img/logo.png" alt="logo" srcset="">
-                    </picture>
-                </a>
-
-                <nav class="nav footer__nav">
-                    <ul class="nav-list footer__nav-list">
-                        <li class="nav-list__item footer-nav__item">
-                            <a href="#" class="nav-list__link nav-list__link--current">Внедрение</a>
-                        </li>
-                        <li class="nav-list__item footer-nav__item">
-                            <a href="#" class="nav-list__link">Виджеты</a>
-                        </li>
-                        <li class="nav-list__item footer-nav__item">
-                            <a href="#" class="nav-list__link">Лицензии</a>
-                        </li>
-                        <li class="nav-list__item footer-nav__item">
-                            <a href="#" class="nav-list__link">Обучение</a>
-                        </li>
-                    </ul>
-                </nav>
-                
-                    <div class="callback footer__callback">
-                    
-                        <button class="btn-secondary footer__btn-secondary">Заказать звонок</button>
-                        <a href="tel:79993331039" class="footer__phone">+7 999 333 10 39</a>
-                        <a href="#" class="callback__whatsapp footer__whatsapp" aria-label="Перейти в WhatsApp">
-                            <svg>
-                                <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
-                            </svg>
-                        </a>
-                    </div>
-
-                        <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">Лицензионное соглашение </a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Политика компании в отношении обработки персональных данных</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Безопасность и надежность</a></li>
-                        </ul>
-                    
-            
-
-                
+            <div class="hero__image">
+              <picture>
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./assets/img/hero-img.png"
+                />
+                <source
+                  media="(max-width: 768px)"
+                  srcset="./assets/img/hero-img-sm.png"
+                />
+                <img src="./assets/img/hero-img.png" alt="Схема внедрения" />
+              </picture>
             </div>
-        </footer>
+          </div>
+        </section>
+        <section class="statistics">
+          <div class="container statistics__container">
+            <div class="statistics__text">
+              <h2 class="title statistics__title">
+                Статистика продаж в мессенджерах
+              </h2>
+              <p class="statistics__descr">
+                Посмотрите детальную статистику обращений из мессенджеров и
+                оцените эффективность каждого из них как источника трафика.
+                Новый виджет для рабочего стола предоставит вам возможность
+                проанализировать качество работы сотрудников: например, по
+                количеству ответов на чаты.
+              </p>
+              <button class="btn-secondary statistics__btn">
+                Попробуйте бесплатно
+              </button>
+            </div>
+            <div class="statistics__img">
+              <picture>
+                <img src="./assets/img/stat.png" alt="Статистика" />
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="features">
+          <div class="container">
+            <h2 class="title features__title">
+              Какие ценности мы даем вашему бизнесу:
+            </h2>
+            <ul class="features__list">
+              <li class="features__item">
+                <div class="features__item-box">
+                  <h3 class="features__item-title">Автоматизация</h3>
+                  <p class="features__item-descr">
+                    Автоматизация повторяющихся операций (автозадачи,
+                    автоматическая отправка шаблонных писем, sms,авто-генерация
+                    договоров, счетов, актов и т.д.)
+                  </p>
+
+                  <h3 class="features__item-title">Одно окно в сделке</h3>
+                  <p class="features__item-descr">
+                    Возможность вести общение с клиентом из одного окна в сделке
+                  </p>
+
+                  <h3 class="features__item-title">Хронологический список</h3>
+                  <p class="features__item-descr">
+                    Хронологический список действий каждого сотрудника отдела
+                    продаж в едином списке событий
+                  </p>
+                </div>
+              </li>
+              <li class="features__item">
+                <div class="features__item-box">
+                  <h3 class="features__item-title">Интеграция каналов связи</h3>
+                  <p class="features__item-descr">
+                    Интеграция всех каналов связи с клиентом. Е-mail, телефония
+                    sms, сайт, WhatsApp, Viber, instagram,FaceBook, чат между
+                    сотрудниками.
+                  </p>
+
+                  <h3 class="features__item-title">Актуальное</h3>
+                  <p class="features__item-descr">
+                    Все актуальные сведения о заказе и о клиенте в одном месте
+                  </p>
+
+                  <h3 class="features__item-title">Фиксация звонков</h3>
+                  <p class="features__item-descr">
+                    Фиксация звонков в системе в т.ч. и с мобильного (доступно
+                    при использовании телефонии Sipuni).
+                  </p>
+                </div>
+              </li>
+              <li class="features__item">
+                <div class="features__item-box">
+                  <h3 class="features__item-title">Скрытие номеров</h3>
+                  <p class="features__item-descr">
+                    Возможность скрыть от менеджеров телефонные номера клиентов
+                    по которым они звонят (функция доступна в тарифе
+                    Профессиональный телефонии Sipuni)
+                  </p>
+
+                  <h3 class="features__item-title">Смена этапов продаж</h3>
+                  <p class="features__item-descr">
+                    Автоматическая смена этапа продаж по событию
+                  </p>
+
+                  <h3 class="features__item-title">Умное распределение</h3>
+                  <p class="features__item-descr">
+                    Умное распределение входящих обращений от клиентов на
+                    менеджеров компании
+                  </p>
+                </div>
+              </li>
+              <li class="features__item">
+                <div class="features__item-box">
+                  <h3 class="features__item-title">Организация рассылок</h3>
+                  <p class="features__item-descr">
+                    Организация рассылок для привлечения новых клиентов,
+                    подключаем и настраиваем виджеты mailchimp, sendpulse,
+                    mailygen и т.д.
+                  </p>
+
+                  <h3 class="features__item-title">Встроенный мессенджер</h3>
+                  <p class="features__item-descr">
+                    Встроенный мессенджер для общения с коллегами
+                  </p>
+
+                  <h3 class="features__item-title">Отслеживание</h3>
+                  <p class="features__item-descr">
+                    Возможность отслеживать прочтение отправленного e-mail,
+                    посещения сайта или определенной страницы.
+                  </p>
+                </div>
+              </li>
+            </ul>
+
+            <button type="button" class="btn-secondary features__btn">
+              Что еще?
+            </button>
+          </div>
+        </section>
+
+        <section class="release">
+          <div class="container">
+            <h2 class="title release__title">
+              Новый релиз amoCRM, новые функции:
+            </h2>
+            <div class="release-video">
+              <iframe
+                class="release__content"
+                src="https://www.youtube.com/embed/NqcrCtZoidw"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </section>
+
+        <section class="problems">
+          <div class="container">
+            <h2 class="title problems__title">
+              Проблемы, которые решает внедрение amoCRM:
+            </h2>
+            <ul class="problems-list">
+              <li class="problems-list__item">
+                <div class="problems-list__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#problem-1"></use>
+                  </svg>
+                </div>
+                <div class="problems-list__item-text">
+                  <h3 class="problems-list__item-title">
+                    Не системная обработка клиентов
+                  </h3>
+                  <p class="problems-list__item-descr">
+                    Нет системы продаж, хаотичные звонки или письма, непонятно
+                    когда и с каким клиентом связываться, как следствие не
+                    стабильные продажи.
+                  </p>
+                </div>
+              </li>
+              <li class="problems-list__item">
+                <div class="problems-list__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#problem-2"></use>
+                  </svg>
+                </div>
+                <div class="problems-list__item-text">
+                  <h3 class="problems-list__item-title">
+                    Пропустили звонок клиента
+                  </h3>
+                  <p class="problems-list__item-descr">
+                    После внедрения системы в ваш бизнес все обращения клиента
+                    по каждому из каналов связи автоматически фиксируются в
+                    системе и ставится задача на ответственного сотрудника.
+                  </p>
+                </div>
+              </li>
+              <li class="problems-list__item">
+                <div class="problems-list__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#problem-3"></use>
+                  </svg>
+                </div>
+                <div class="problems-list__item-text">
+                  <h3 class="problems-list__item-title">
+                    Менеджеры увольняются и уходят вместе с вашей клиентской
+                    базой
+                  </h3>
+                  <p class="problems-list__item-descr">
+                    Это можно исключить с помощью интеграции amoCRM и телефонии
+                    Sipuni (доступно на профессиональном тарифе). Менеджеры
+                    теперь вообще не видят телефонов клиентов.
+                  </p>
+                </div>
+              </li>
+              <li class="problems-list__item">
+                <div class="problems-list__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#problem-4"></use>
+                  </svg>
+                </div>
+                <div class="problems-list__item-text">
+                  <h3 class="problems-list__item-title">
+                    Бездействие сотрудников в рабочее время
+                  </h3>
+                  <p class="problems-list__item-descr">
+                    Сотрудники занимаются своими делами на рабочем месте,эту
+                    проблему решит amoCRM.
+                  </p>
+                </div>
+              </li>
+              <li class="problems-list__item">
+                <div class="problems-list__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#problem-5"></use>
+                  </svg>
+                </div>
+                <div class="problems-list__item-text">
+                  <h3 class="problems-list__item-title">
+                    Отсутствие сбора обратной связи от клиентов
+                  </h3>
+                  <p class="problems-list__item-descr">
+                    Встроенный индекс потребительской лояльности (NPS). Доступен
+                    на тарифах Расширенный и Профессиональный в amoCRM.
+                  </p>
+                </div>
+              </li>
+              <li class="problems-list__item">
+                <div class="problems-list__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#problem-1"></use>
+                  </svg>
+                </div>
+                <div class="problems-list__item-text">
+                  <h3 class="problems-list__item-title">
+                    Не понятно на каком этапе продажи клиенты отказывают
+                  </h3>
+                  <p class="problems-list__item-descr">
+                    После внедрения видно на каком из этапов больше всего уходят
+                    клиенты,можно и нужно подумать над бизнес-процессом или
+                    понять причину отказа.
+                  </p>
+                </div>
+              </li>
+            </ul>
+            <button class="btn-secondary btn-more problems-btn" type="button">
+              Что еще?
+            </button>
+          </div>
+        </section>
+
+        <section class="stages">
+          <h2 class="title stages__title">Этапы внедрения amoCRM:</h2>
+          <div class="container stages__container">
+            <div class="stages__col stages__col-left">
+              <article class="stages__card stages__card--green">
+                <h3 class="stages__card-title">Погружаемся в бизнес</h3>
+                <p class="stages__card-descr">
+                  Проводим аудит отдела продаж и описываем бизнес-процессы
+                </p>
+              </article>
+              <h3 class="stages__descr">
+                Настройка <br />
+                системы
+              </h3>
+              <article class="stages__card">
+                <h3 class="stages__card-title">
+                  Обучаем менеджеров работать в едином стандарте
+                </h3>
+                <p class="stages__card-descr">
+                  Менеджеры работают быстрее и эффективнее с помощью
+                  автоматической отправки коммерческих предложений,
+                  SMS-уведомлений, автозаполнения договоров.
+                </p>
+              </article>
+              <h3 class="stages__descr">Сопровождение</h3>
+            </div>
+            <div class="stages__col stages__col-circles">
+              <div class="stages__circle">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#order"></use>
+                </svg>
+              </div>
+              <div class="stages__circle">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#settings"></use>
+                </svg>
+              </div>
+              <div class="stages__circle">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#teaching"></use>
+                </svg>
+              </div>
+              <div class="stages__circle">
+                <svg>
+                  <use xlink:href="assets/img/sprite.svg#presentation"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="stages__col stages__col-right">
+              <h3 class="stages__descr">
+                Подготовка <br />
+                регламента
+              </h3>
+              <article class="stages__card">
+                <h3 class="stages__card-title">
+                  Внедряем комплексную CRM-систему
+                </h3>
+                <p class="stages__card-descr">
+                  Собираем все коммуникации в одном месте: многоканальная
+                  IP-телефония, почта, мессенджеры, социальные сети. Заявки
+                  больше не потеряются.
+                </p>
+              </article>
+              <h3 class="stages__descr">ОБУЧЕНИЕ</h3>
+              <article class="stages__card">
+                <h3 class="stages__card-title">
+                  Настраиваем инструменты аналитики и управления
+                </h3>
+                <p class="stages__card-descr">
+                  Вы не можете управлять тем, что не можете измерить.
+                  Контролируйте выполнение плана продаж по ежедневным
+                  показателям.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="clients">
+          <div class="container">
+            <h2 class="title clients__title">Наши основные клиенты:</h2>
+            <div class="clients__content">
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#bank"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title">Финансовые компании</span>
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#gavel"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title">Юридические компании</span>
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#juice"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title"
+                  >Производственные компании</span
+                >
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#gavel"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title"
+                  >Маркетиновые и PR компании</span
+                >
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#worker"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title">Строительные компании</span>
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#eat"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title"
+                  >Рестораны и кейтеринг компании</span
+                >
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#delivery-man"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title"
+                  >Служба доставки здоровой еды</span
+                >
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#car"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title">Авто-сервисы</span>
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#programmer"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title">ИТ-Компании</span>
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#pedicure"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title">Школы танцев</span>
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#microphone"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title">Вокальные школы</span>
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#audiobook"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title">Колл-центры</span>
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#printer"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title">Типографии и другие</span>
+              </div>
+              <div class="clients__item">
+                <div class="clients__item-img">
+                  <svg>
+                    <use xlink:href="assets/img/sprite.svg#restaurant"></use>
+                  </svg>
+                </div>
+                <span class="clients__item-title"
+                  >Санаторно-курортная отрасль</span
+                >
+              </div>
+            </div>
+            <button class="btn-secondary btn-more clients-btn" type="button">
+              Кто ещё?
+            </button>
+          </div>
+        </section>
+
+        <section class="certificate">
+          <div class="container">
+            <h2 class="title certificate__title">
+              Компания является сертифицированным партнером и интегратором
+              amoCRM.
+            </h2>
+            <div class="certificate-row">
+              <div class="certificate__item">
+                <picture>
+                  <img
+                    src="./assets/img/certificate-1.jpg"
+                    srcset="./assets/img/certificate-1@2x.jpg 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </div>
+              <div class="certificate__item">
+                <picture>
+                  <img
+                    src="./assets/img/certificate-2.jpg"
+                    srcset="./assets/img/certificate-2@2x.jpg 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </div>
+              <div class="certificate__item">
+                <picture>
+                  <img
+                    src="./assets/img/certificate-3.jpg"
+                    srcset="./assets/img/certificate-3@2x.jpg 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </div>
+              <div class="certificate__item">
+                <picture>
+                  <img
+                    src="./assets/img/certificate-4.jpg"
+                    srcset="./assets/img/certificate-4@2x.jpg 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </div>
+              <div class="certificate__item">
+                <picture>
+                  <img
+                    src="./assets/img/certificate-5.jpg"
+                    srcset="./assets/img/certificate-5@2x.jpg 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="partners">
+          <div class="container">
+            <h2 class="title partners__title">
+              Наши партнеры и их продуктовые решения:
+            </h2>
+            <ul class="partners__list">
+              <li class="partners__item">
+                <picture>
+                  <img
+                    src="./assets/img/partner-1.png"
+                    srcset="./assets/img/partner-1@2x.png 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </li>
+              <li class="partners__item">
+                <picture>
+                  <img
+                    src="./assets/img/partner-2.png"
+                    srcset="./assets/img/partner-2@2x.png 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </li>
+              <li class="partners__item">
+                <picture>
+                  <img
+                    src="./assets/img/partner-3.png"
+                    srcset="./assets/img/partner-3@2x.png 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </li>
+              <li class="partners__item">
+                <picture>
+                  <img
+                    src="./assets/img/partner-4.png"
+                    srcset="./assets/img/partner-4@2x.png 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </li>
+              <li class="partners__item">
+                <picture>
+                  <img
+                    src="./assets/img/partner-5.png"
+                    srcset="./assets/img/partner-5@2x.png 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </li>
+              <li class="partners__item">
+                <picture>
+                  <img
+                    src="./assets/img/partner-6.png"
+                    srcset="./assets/img/partner-6@2x.png 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </li>
+              <li class="partners__item">
+                <picture>
+                  <img
+                    src="./assets/img/partner-7.png"
+                    srcset="./assets/img/partner-7@2x.png 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </li>
+              <li class="partners__item">
+                <picture>
+                  <img
+                    src="./assets/img/partner-8.png"
+                    srcset="./assets/img/partner-8@2x.png 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </li>
+              <li class="partners__item">
+                <picture>
+                  <img
+                    src="./assets/img/partner-9.png"
+                    srcset="./assets/img/partner-9@2x.png 2x"
+                    alt="Сертификат партнёра"
+                  />
+                </picture>
+              </li>
+            </ul>
+            <button class="btn-secondary btn-more partners-btn" type="button">
+              Кто ещё?
+            </button>
+          </div>
+        </section>
+
+        <section class="query">
+          <div class="container query__container">
+            <form action="#" class="query-form">
+              <h2 class="query-form__title">
+                Если у Вас есть вопросы по внедрению amoCRM в вашу компанию -
+                заполните форму и мы перезвоним!
+              </h2>
+
+              <label for="name">
+                <div class="query-form__input-wrapper">
+                  <input
+                    type="text"
+                    class="query-form__input"
+                    placeholder="Ваше имя"
+                    required
+                  />
+                </div>
+              </label>
+              <label for="phone">
+                <div class="query-form__input-wrapper">
+                  <input
+                    type="number"
+                    class="query-form__input"
+                    placeholder="Ваш телефон"
+                    required
+                  />
+                </div>
+              </label>
+              <button class="btn-primary query-form__btn">Хочу обсудить</button>
+
+              <p class="query-form__descr">
+                ** Оставляя заявку, Вы даете согласие на обработку персональных
+                данных согласно закону РФ.
+              </p>
+            </form>
+            <div class="query__img">
+              <img
+                src="./assets/img/man.png"
+                srcset="./assets/img/man@2x.png 2x"
+                alt="Парень с ноутбуком"
+              />
+            </div>
+          </div>
+        </section>
+
+        <div class="overlay">
+          <div class="overlay-content">
+            <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="" class="menu__link menu__link--current">Внедрение</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Виджеты </a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Лицензии</a>
+                </li>
+                <li class="menu__item">
+                  <a href="" class="menu__link">Обучение</a>
+                </li>
+              </ul>
+            </nav>
+            <button class="btn-secondary">Заказать звонок</button>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="container footer__container">
+          <a href="#" class="logo footer__logo" aria-label="OINZ">
+            <picture>
+              <img src="./assets/img/logo.png" alt="logo" srcset="" />
+            </picture>
+          </a>
+
+          <nav class="nav footer__nav">
+            <ul class="nav-list footer__nav-list">
+              <li class="nav-list__item footer-nav__item">
+                <a href="#" class="nav-list__link nav-list__link--current"
+                  >Внедрение</a
+                >
+              </li>
+              <li class="nav-list__item footer-nav__item">
+                <a href="#" class="nav-list__link">Виджеты</a>
+              </li>
+              <li class="nav-list__item footer-nav__item">
+                <a href="#" class="nav-list__link">Лицензии</a>
+              </li>
+              <li class="nav-list__item footer-nav__item">
+                <a href="#" class="nav-list__link">Обучение</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="callback footer__callback">
+            <button class="btn-secondary footer__btn-secondary">
+              Заказать звонок
+            </button>
+            <a href="tel:79993331039" class="footer__phone">+7 999 333 10 39</a>
+            <a
+              href="#"
+              class="callback__whatsapp footer__whatsapp"
+              aria-label="Перейти в WhatsApp"
+            >
+              <svg>
+                <use xlink:href="assets/img/sprite.svg#whatsapp"></use>
+              </svg>
+            </a>
+          </div>
+
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a href="#" class="footer__link">Лицензионное соглашение </a>
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link"
+                >Политика компании в отношении обработки персональных данных</a
+              >
+            </li>
+            <li class="footer__item">
+              <a href="#" class="footer__link">Безопасность и надежность</a>
+            </li>
+          </ul>
+        </div>
+      </footer>
     </div>
 
-    
     <script src="./js/script.js"></script>
-</body>
+  </body>
 </html>
-

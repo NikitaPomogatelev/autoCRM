@@ -13,10 +13,8 @@
         flex-wrap: wrap
 
         overflow: hidden
-        @media (max-width: 1200px)
-            max-height: 640px
+            
         @media (max-width: 768px)
-            max-height: 550px
             margin-bottom: 30px
     &__item
         text-align: center
@@ -26,7 +24,7 @@
             margin-bottom: 40px
             width: 50%
             &:nth-last-of-type(-n + 6)               
-                opacity: 0
+                display: none
             
     &__item-img
         width: 70px
